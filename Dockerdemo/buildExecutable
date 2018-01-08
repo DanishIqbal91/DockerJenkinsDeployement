@@ -1,0 +1,6 @@
+cd /
+cd /root/git/DockerJenkinsDeployement/Dockerdemo
+docker stop helloworld
+docker rm helloworld
+docker build -t hello-world /root/git/DockerJenkinsDeployement/Dockerdemo/
+docker run -d --name helloworld -p 80:80 -v /root/git/DockerJenkinsDeployement/Dockerdemo/src/:/var/www/html  hello-world
